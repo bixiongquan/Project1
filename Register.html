@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    div{
+    background:#009FCC;
+    font-size:24px;
+    padding:5px;
+    color:white;
+    }
+    form{
+    background: #F8F8FF ;
+    border:#357FC4 solid 1px;
+    color:#575454;
+    width:400px;
+    margin:20px auto;
+    font-size:15px;
+    }
+    table{
+    margin:10px auto;
+    }
+    a{
+    text-decoration:none;
+    }
+    input[type="button"]{
+    background:#228B22;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    width:120px;
+    height:40px;
+    }
+    td:first-child{
+    text-align:right;
+    padding:0 5px;
+    }
+    td:only-child{
+    text-align:center;
+    font-size:12px;
+    }
+    span:before{
+    content:"* ";
+    color:red;
+    }
+    input[type="text"]:read-only{
+    border:#888484 solid 2px;
+    background:#888484;
+    font-weight:bold;
+    }
+    input[type="text"]:hover{
+    background:#EFD9AC;
+    }
+    </style>
+</head>
+<body>
+<form>
+    <div>注册账号</div>
+    <table>
+        <tr><td><span>用户名</span></td><td><input type="text" id="user_name" onchange="r1()"/></td></tr>
+        <tr><td><p id="name"></p></td></tr>
+        <tr><td><span>电话</span></td><td><input type="text" id="user_tel" onchange="r4()"/></td></tr>
+        <tr><td><p id="tel"></p></td></tr>
+        <tr><td><span>密码</span></td><td><input type="password" id="password" onchange="r2()"/></td></tr>
+        <tr><td><p id="word"></p></td></tr>
+        <tr><td><span>确认密码</span></td><td><input type="password" id="confirm_password" onchange="r3()"/></td></tr>
+        <tr><td><p id="wordAgain"></p></td></tr>
+        <tr><td>性别</td><td><input type="radio" id="male" name="user_sex" checked />男<input type="radio" id="female" name="user_sex" />女</td></tr>
+        <tr><td colspan="2"><input type="checkbox" checked/>我已看过并接受<a href="#">《用户协议》</a></td></tr>
+        <tr><td colspan="2"><input type="button" onclick="r5()" value="立即注册" style="cursor:pointer;"/></td></tr>
+    </table>
+</form>
+<script>
+function r1() {
+    var username = document.getElementById("user_name");
+    var name = document.getElementById("name");
+    name.innerHTML = "";
+    if (username.value == "") {
+        name.innerHTML = "用户名不能为空";
+    }
+    else
+        if (username.value.match(/^(＼d+)$/) || username.value.match(/^([a-zA-Z]+)$/) || username.value.length < 6) {
+            name.innerHTML = "用户名不能为纯数字或纯字母，且多于六位";
+        }
+    }
+
+    function r2() {
+        var username = document.getElementById("user_name");
+        var pass = document.getElementById("password");
+        var word = document.getElementById("word");
+        word.innerHTML = "";
+        if (pass.value == "") {
+            word.innerHTML = "密码不能为空";
+        }
+        if (pass.value === username.value || pass.value.length < 6) {
+            word.innerHTML = "密码不能与用户名同，且多于六位";
+        }
+    }
+
+    function r3() {
+        var pass = document.getElementById("password");
+        var passAgain = document.getElementById("confirm-password");
+        var wordAgain = document.getElementById("wordAgain");
+        wordagain.innerHTML = "";
+        if (pass.value === passAgain.value)
+        {}
+        else{
+            wordAgain.innerHTML = "两次密码不同";
+        }
+}
+function r4() {
+    var userTel = document.getElementById("user_tel");
+    var tel = document.getElementById("tel");
+    tel.innerHTML = "";
+    if (userTel.value.match(/^(＼d+)$/)){}
+    else{
+        tel.innerHTML = "电话号码为纯数字";
+    }
+}
+function r5() {
+   alert("登陆成功");
+   r3();
+    window.open("new FP.html");
+}
+</script>
+</body>
+</html>

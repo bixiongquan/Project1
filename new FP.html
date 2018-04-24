@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            width:1000px;
+            text-align: center;
+        }
+        section{
+            padding:0;
+            margin: 0;
+            width: 1000px;
+            height:1100px;
+            border: solid black thin;
+            text-align: center;
+            vertical-align:center;
+        }
+        .top{
+            padding:0;
+            margin:0;
+            width: 998px;
+            height: 400px;
+            background-image:url(images/works/average/102030.jpg);
+            background-size:998px 400px;
+            background-repeat: no-repeat;
+            text-align:center;
+            vertical-align:center;
+        }
+        div.one{
+            float: left;
+            margin:0 2em;
+        }
+        ul{
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            float: right;
+        }
+        li{
+            display:inline;
+            text-decoration:none;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            opacity:0.6;
+            cursor:pointer;
+            font-weight:bold;
+        }
+        li a:link{
+            padding:1em ;
+            margin:0;
+
+        }
+        a:hover{
+            opacity: 1.0;
+            cursor: pointer;
+            color: orangered;
+        }
+        div.picture{
+            margin: 0;
+            padding:10px;
+            height:310px;
+            width:300px;
+            float:left;
+            text-align:center;
+            vertical-align:center;
+        }
+        div.img{
+            display:inline;
+            margin:10px 35px;
+            width:100px;
+            height:100px;
+        }
+        div.img img {
+            opacity:0.4;
+            width:50px;
+            height:50px;
+            border-radius: 25px;
+        }
+        div.img a:hover img{
+            opacity:1;
+        }
+        div.desc{
+            text-align:center;
+            width:300px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="top">
+        <div class="one">
+            <h1 style="display:inline;color:white;">Art Store</h1>
+            <p style="display: inline;color:white;">Where you find genius and extroordinary</p>      <!--后面改-->
+
+        </div>
+        <div id="as" style="float:right; margin:1em 2em;">
+            <ul>
+                <li><a href="personality.html">张三</a></li>
+                <li><a href="First Page.html">登出</a></li>
+            </ul>
+        </div>
+        <a href="Product Details.html"><img id="shift" src="images/works/square-medium/095010.jpg" style="width:500px; height:345px; Z-index:-1;margin:0 250px;"/></a>
+        <div style="padding:10px;position: absolute;left:450px; top:200px;border:white solid 1px;">
+            <a href="Product Details.html">Learn more</a>
+        </div>
+    </div>
+    <div>
+        <div class="picture">
+            <div class="img">
+                <a href="Product Details.html"><img src="images/artists/square-medium/5.jpg"/></a>
+            </div>
+            <div class="desc">
+                <h5 style="display:inline;">Portrait of Elenor Toloks</h5><br>
+                Her book is organized into sections by epochs and ruling governments at times, the comprehension of such a long
+                history into this short space makes it hard to digest, but Lancaster stops often to recount captivating legend
+                and anecdotes. She seems to have a quote from every writer or thinker who ever visited Naples or its surroundings.
+                <div style="margin:0 100px;"><button onclick="window.open('Product Details.html')">View Details</button></div>
+            </div>
+        </div>
+        <div class="picture">
+            <div class="img">
+                <a href="Product Details.html"><img src="images/artists/square-medium/15.jpg"/></a>
+            </div>
+            <div class="desc">
+                <h5 style="display:inline;">Portrait of Elenor Toloks</h5><br>
+                As she stresses, for most of its history, Naples was a preeminent European city,a thriving home for music,philosophy,painting and science.
+                Her book is organized into sections by epochs and ruling governments at times,the comprehension of such a long history into this short space
+                makes it hard to digest,but Lancaster stops often recount captivating legends and ancdotes.
+                <div style="margin:0 100px;"><button onclick="window.open('Product Details.html')">View Details</button></div>
+            </div>
+        </div>
+        <div class="picture">
+            <div class="img">
+                <a href="Product Details.html"><img src="images/artists/square-medium/6.jpg"/></a>
+            </div>
+            <div class="desc">
+                <h5 style="display:inline;">Portrait of Elenor Toloks</h5><br>
+                With this engaging history,Lancaster,a professor of Italian,seeks to restores honor to Naples,which many Italians and prospective visitors see as a city
+                of little more than pickpockets and pizza. As she stresses,for most of its history,Naples was a preeminent
+                European city,athriving home for music,philosophy,painting and music.
+                <div style="margin:0 100px;"><button onclick="window.open('Product Details.html')">View Details</button></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var timeInterval=1000;
+    var index=0;
+    var arr = new Array();
+    var t;
+    arr[0]="images/works/average/099010.jpg";
+    arr[1]="images/works/average/099050.jpg";
+    arr[2]="images/works/average/099060.jpg";
+    setTimeout("changeImg()",timeInterval);
+    function changeImg(){
+        var obj=document.getElementById("shift");
+        if(index===arr.length-1){
+            index=0;
+        }
+        else{
+            index++;
+        }
+        obj.src=arr[index];
+        setTimeout("changeImg()",timeInterval);
+    }
+</script>
+</body>
+</html>

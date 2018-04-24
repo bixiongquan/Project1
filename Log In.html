@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            margin:20% 40%;
+            width:400px;
+            height:300px;
+            background-color:blue;
+            text-align:center;
+            vertical-align:center;
+            padding:0;
+        }
+        table{
+            padding:0;
+            margin:0;
+            width:400px;
+            height:300px;
+        }
+        tr{
+            padding:0;
+            margin:0;
+            width:400px;
+            height:100px;
+        }
+        td{
+            padding:0;
+            margin:0;
+            text-align:center;
+        }
+        span{
+            padding:0;
+            margin:0;
+            width:250px;
+        }
+    </style>
+    <script>
+        function r1() {
+            var username = document.getElementById("username");
+            if (username.value == "") {
+                alert("用户名不能为空");
+               // username.focus();
+               // return;
+            }
+            if (username.value === "xx") {
+                alert("用户不存在");
+               // username.focus();
+               // return;
+            }
+        }
+        function r2() {
+            var pass=document.getElementById("password");
+            if(pass.value=="")
+            {
+                alert("请输入密码");
+               // return;
+            }
+            if(pass.value==="xx")
+            {
+                alert("密码错误");
+                //return;
+            }
+            //return true;
+        }
+        function r3(){
+            var username = document.getElementById("username");
+            var pass=document.getElementById("password");
+            if(pass.value==="fdu173020" && username.value==="Zhang San"){
+                alert("登陆成功");
+                window.open("new FP.html")
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+  <table>
+      <tr>
+          <td style="width:400px"><span>用户名：</span><input type="text" size="35px" id="username" onchange="r1()"/></td>
+      </tr>
+      <tr>
+          <td style="width:400px;"><span>密码：</span><input type="password" size="35px" id="password" onchange="r2()"/></td>
+      </tr>
+      <tr>
+          <td style="width:200px;"><input style="cursor:pointer;" type="submit" value="登陆" onclick="r3()"/></td>
+            <td><input style="cursor:pointer;" type="reset" value="重置"/></td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>

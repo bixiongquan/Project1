@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body,div,table,tr,td,ul,li{
+            padding:0;
+            margin:0;
+        }
+        body{
+            width:1000px;
+
+        }
+        div.first{
+            padding:2px 5px;
+            width:1000px;
+            height:20px;
+            color:white;
+            background-color:black;
+        }
+        div.fr{
+            width:50px;
+            float:right;
+            margin:0 20px;
+        }
+        div.second{
+            width:1000px;
+            vertical-align:center;
+            height:50px;
+        }
+        ul{
+            list-style-type:none;
+        }
+        li{
+            display:inline;
+            width:100px;
+            text-align:center;
+            padding:2px 5px;
+        }
+        div.third{
+            width:1000px;
+            background-color:pink;
+            text-align:left;
+        }
+        form{
+            width:950px;
+            margin:20px;
+        }
+        div.car{
+            width:905px;
+            padding:20px;
+            border:solid darkseagreen 2px;
+        }
+        div.img{
+            width:860px;
+            padding:10px;
+            height:150px;
+            background-color:lightpink;
+        }
+        div.img img{
+            width:100px;
+            height:100px;
+            float:left;
+            padding:20px;
+        }
+        div.des{
+            float:left;
+            width:700px;
+            height:150px;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            opacity:0.6;
+            cursor:pointer;
+            font-weight:bold;
+        }
+        a:hover{
+            opacity: 1.0;
+            cursor: pointer;
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="first">
+        <div class="fr">checkout</div>
+        <div class="fr"><a href="Product%20Details.html">购物车</a></div>
+        <div class="fr"><a href="First%20Page.html">登出</a></div>
+    </div>
+    <div class="second">
+        <div style="float:left;width:500px;padding:5px 20px"><h1 style="display:inline;">Art Store</h1></div>
+        <div style="float:right;width:300px;padding:10px 20px;"><p style="display:inline;"><input type="search" value="search"/><input type="button" value="搜索" onclick="window,open('Search.html')"/></p></div>
+    </div>
+    <div class="third">
+        <ul>
+            <li><a href="First Page.html">首页</a></li>
+            <li><a href="Search.html">搜索</a></li>
+            <li><a href="Shopping.html">详情</a></li>
+            <li><a href="">发布艺术品</a></li>
+        </ul>
+    </div>
+    <form>
+        <fieldset>
+            <legend>购物车</legend>
+            <div class="car">
+                <div class="img">
+                    <img src="images/works/square-medium/106020.jpg"/>
+                    <div class="des">
+                        <h1>Het meisje met de parel</h1>
+                        <p>Johannes Vermeer</p>
+                        <div style="float:left"><input type="button" value="价格：$120.0000"/></div>
+                        <div style="float:right"><input type="button" value="删除" onclick="w1()"/></div>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="images/works/square-medium/001080.jpg"/>
+                    <div class="des">
+                        <h1>Family of Saltimbanques</h1>
+                        <p>Pablo Picaddo</p>
+                        <div style="float:left"><input type="button" value="价格：$170.0000"/></div>
+                        <div style="float:right"><input type="button" value="删除" onclick="w1()"/></div>
+                    </div>
+                </div>
+            </div>
+            <div style="float:right; margin: 20px;"><input type="button" value="结款：$290" onclick="w2()"/></div>
+        </fieldset>
+    </form>
+</div>
+<script>
+    function w1(){
+        alert("删除成功");
+    }
+
+    function w2(){
+        alert("结账成功");
+    }
+</script>
+</body>
+</html>

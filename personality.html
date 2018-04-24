@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body,div,table,tr,td,ul,li{
+            padding:0;
+            margin:0;
+        }
+        body{
+            width:1000px;
+
+        }
+        div.first{
+            padding:2px 5px;
+            width:1000px;
+            height:20px;
+            color:white;
+            background-color:black;
+        }
+        div.fr{
+            width:50px;
+            float:right;
+            margin:0 20px;
+        }
+        div.second{
+            width:1000px;
+            vertical-align:center;
+            height:50px;
+        }
+        ul.ul1{
+            list-style-type:none;
+        }
+        ul.ul1 li{
+            display:inline;
+            width:100px;
+            text-align:center;
+            padding:2px 5px;
+        }
+        div.third{
+            width:1000px;
+            background-color:pink;
+            text-align:left;
+        }
+        div.fourth{
+            width:1000px;
+        }
+        div.fourth1{
+            width:240px;
+            background-color:powderblue;
+            border:1px solid grey;
+            float:left;
+            text-align:center;
+            vertical-align:center;
+            margin:20px 10px;
+        }
+        div.fourth2{
+            width:690px;
+            float:right;
+            margin:20px 10px;
+        }
+        div.up{
+            width:700px;
+            height:150px;
+            background-color:peachpuff;
+            margin: 5px 0;
+        }
+        div.center{
+            text-align:center;
+            vertical-align:center;
+            width:700px;
+            height:150px;
+            background-color:lightpink;
+            margin:5px 0;
+        }
+        div.down{
+            width:680px;
+            height:110px;
+            background-color:palegreen;
+            padding:20px 10px;
+            margin:5px 0;
+        }
+        table, td {
+            border:solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="first">
+            <div class="fr">checkout</div>
+            <div class="fr"><a href="Product%20Details.html">购物车</a></div>
+            <div class="fr">登出</div>
+        </div>
+        <div class="second">
+            <div style="float:left;width:500px;padding:5px 20px"><h1 style="display:inline;">Art Store</h1></div>
+            <div style="float:right;width:300px;padding:10px 20px;"><p style="display:inline;"><input type="search" value="search"/><input type="submit" value="搜索"/></p></div>
+        </div>
+        <div class="third">
+            <ul class="ul1">
+                <li><a href="First Page.html">首页</a></li>
+                <li><a href="Search.html">搜索</a></li>
+                <li><a href="Shopping.html">详情</a></li>
+                <li><a href="">发布艺术品</a></li>
+            </ul>
+        </div>
+        <div class="fourth">
+            <div class="fourth1">
+                <p style="display:inline;">用户：张三</p><br>
+                <p style="display:inline;">电话：13088888888</p><br>
+                <p style="display:inline;">邮箱：123456@qq.com</p><br>
+                <p style="display:inline;">余额：￥1234</p><br>
+                <p style="display:inline;"><button>充值</button></p>
+            </div>
+            <div class="fourth2">
+                <div class="up">
+                    我上传的艺术品：
+                    <table>
+                        <tr>
+                            <td>名：mother and child</td>
+                            <td>作者：PobloPicasso</td>
+                            <td>描述：This work is amazing...... </td>
+                        </tr>
+                        <tr>
+                            <td>名:Nighthaws</td>
+                            <td>作者：Edward Hope</td>
+                            <td>描述：this is extraodinary work in......</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="center">
+                    <p>我购买的艺术品</p>
+                    <table>
+                        <tr>
+                            <td>订单编号：20160526060</td>
+                            <td>商品名称：Sunflower</td>
+                            <td>订单时间：20160526</td>
+                            <td>订单金额：￥400</td>
+                        </tr>
+                        <tr>
+                            <td>订单编号：20160526473</td>
+                            <td>商品名称：Wangli</td>
+                            <td>订单时间：20160526</td>
+                            <td>订单金额：￥100</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="down">
+                    我卖出的艺术品：
+                    <table>
+                        <tr>
+                            <td>订单编号：20170526060</td>
+                            <td>商品名称：Sunflower</td>
+                            <td>订单时间：20170526</td>
+                            <td>订单金额：￥1400</td>
+                        </tr>
+                        <tr>
+                            <td>订单编号：20170526473</td>
+                            <td>商品名称：WAngli</td>
+                            <td>订单时间：20170526</td>
+                            <td>订单金额：￥1000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>
